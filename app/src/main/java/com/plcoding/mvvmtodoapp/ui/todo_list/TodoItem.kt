@@ -11,9 +11,22 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.plcoding.mvvmtodoapp.data.Todo
+import com.plcoding.mvvmtodoapp.ui.theme.MVVMTodoAppTheme
+
+@Composable
+@Preview
+fun TodoItemPreview() {
+    MVVMTodoAppTheme {
+        TodoItem(
+            todo = Todo("title", "description", true, 0),
+            onEvent = {}
+        )
+    }
+}
 
 @Composable
 fun TodoItem(
